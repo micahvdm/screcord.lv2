@@ -110,9 +110,13 @@ SCapture::~SCapture() {
 inline std::string SCapture::get_ffilename() {
     struct stat buffer;
     struct stat sb;
-    std::string pPath = getenv("HOME");
+    if (getenv("SC_RECORD") != FALSE) std::string pPath = getenv("SC_RECORD");
+	else {
+		std::string pPath = getenv("HOME");
+		pPath +="/lv2record/";
+	}
     is_wav = int(*fformat) ? false : true;
-    pPath +="/lv2record/";
+    
     if (!(stat(pPath.c_str(), &sb) == 0 && S_ISDIR(sb.st_mode))) {
         mkdir(pPath.c_str(), S_IRWXU | S_IRWXG | S_IROTH | S_IXOTH);
     }
