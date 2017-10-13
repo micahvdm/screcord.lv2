@@ -1,6 +1,6 @@
 	user = $(shell whoami)
 	ifeq ($(user),root)
-	INSTALL_DIR = /usr/lib/lv2
+	INSTALL_DIR = $LV2_PATH
 	else 
 	INSTALL_DIR = ~/.lv2
 	endif
