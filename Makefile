@@ -37,7 +37,8 @@ clean :
 install : all
 	@mkdir -p $(DESTDIR)$(INSTALL_DIR)/$(BUNDLE)
 	install ./$(BUNDLE)/* $(DESTDIR)$(INSTALL_DIR)/$(BUNDLE)
-	install ./modgui $(DESTDIR)$(INSTALL_DIR)/$(BUNDLE)
+	cp -r ./modgui       $(DESTDIR)$(INSTALL_DIR)/$(BUNDLE)/
+	
 	
 	@echo ". ." $(BLUE)", done"$(NONE)
 
