@@ -1,4 +1,4 @@
-<h1>screcord</h1>
+<h1>screcord for Zynthian</h1>
 
 <p>a simple Lv2 capture plugin</p>
 -    Include a mono and a stereo capture plugin.
