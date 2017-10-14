@@ -111,7 +111,7 @@ inline std::string SCapture::get_ffilename() {
     struct stat buffer;
     struct stat sb;
 	std::string pPath;
-	FILE *f = popen("mountpoint -- /media/usb0 | sed -n 's/.*\(not\).*/\1/p'", "r");
+	FILE *f = popen("mountpoint -- /media/usb0 | sed -n \'s/.*\(not\).*/\1/p\'", "r");
     if (NULL != f)
     {
         /* test if something has been outputed by 
