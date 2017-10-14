@@ -1,6 +1,6 @@
 	user = $(shell whoami)
 	ifeq ($(user),root)
-	INSTALL_DIR = /zynthian/zynthian-plugins/lv2/
+	INSTALL_DIR = /zynthian/zynthian-plugins/lv2
 	else 
 	INSTALL_DIR = ~/.lv2
 	endif
