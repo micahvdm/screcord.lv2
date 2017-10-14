@@ -5,6 +5,10 @@
 -    using libsndfile <a href="http://www.mega-nerd.com/libsndfile/">http://www.mega-nerd.com/libsndfile/</a>
 -    save audio stream as wav or ogg files to ~/lv2record/lv2_sessionX.wav/ogg were X is replaced by numbers
 -    No Gui, the host need to provide the UI.
+-    This branch has modifications intended for use in <a href="http://http://www.zynthian.org/">Zynthian</a>:
+         -  It will check if /mount/usb0 is mounted and record there if it is
+         -  It has a skin for MOD UI
+         -  It installs to Zynthian's LV2 directory
 
 <p>build:</p>
 -    no build dependency check, just make
