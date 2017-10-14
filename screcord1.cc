@@ -110,11 +110,27 @@ SCapture::~SCapture() {
 inline std::string SCapture::get_ffilename() {
     struct stat buffer;
     struct stat sb;
-    if (getenv("SC_RECORD") != FALSE) std::string pPath = getenv("SC_RECORD");
-	else {
-		std::string pPath = getenv("HOME");
-		pPath +="/lv2record/";
-	}
+	std::string pPath;
+	FILE *f = popen("mountpoint -q -- /media/usb0", "r");
+    if (NULL != f)
+    {
+        /* test if something has been outputed by 
+           the command */
+        if (EOF == fgetc(f))
+        {
+            //puts("/dev/sda1 is NOT mounted");
+		pPath = getenv("HOME");
+        }
+        else
+        {
+            //puts("/dev/sda1 is mounted");
+		pPath = "/media/usb0";
+        }        
+        /* close the command file */
+        pclose(f);        
+    } 
+    
+	pPath +="/lv2record/";
     is_wav = int(*fformat) ? false : true;
     
     if (!(stat(pPath.c_str(), &sb) == 0 && S_ISDIR(sb.st_mode))) {
