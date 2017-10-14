@@ -119,12 +119,12 @@ inline std::string SCapture::get_ffilename() {
         if (EOF == fgetc(f))
         {
             //puts("/dev/sda1 is NOT mounted");
-		pPath = getenv("HOME");
+		pPath = "/media/usb0";
         }
         else
         {
-            //puts("/dev/sda1 is mounted");
-		pPath = "/media/usb0";
+            pPath = getenv("HOME");	
+	
         }        
         /* close the command file */
         pclose(f);        
