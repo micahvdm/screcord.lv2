@@ -66,9 +66,9 @@
         lv2:default 0.0 ;
         lv2:minimum 0.0 ;
         lv2:maximum 1.0 ;
-        rdfs:comment "recorded files go to SC_RECORD if set or ~/home/lv2record/" , 
-        "Aufnahmen gehen nach SC_RECORD  /  ~/home/lv2record/ "@de ,
-        "Les fichiers sont enregistrés dans SC_RECORD   /    ~/home/lv2record/ "@fr;
+        rdfs:comment "recorded files go to /mount/usb0/lv2record/ or ~/home/lv2record/" , 
+        "Aufnahmen gehen nach /mount/usb0/lv2record/  /  ~/home/lv2record/ "@de ,
+        "Les fichiers sont enregistrés dans /mount/usb0/lv2record/   /    ~/home/lv2record/ "@fr;
     ] , [
         a lv2:OutputPort ,
             lv2:ControlPort ;
@@ -130,9 +130,9 @@
         lv2:default 0.0 ;
         lv2:minimum 0.0 ;
         lv2:maximum 1.0 ;
-        rdfs:comment "recorded files go to SC_RECORD if set or ~/home/lv2record/" , 
-        "Aufnahmen gehen nach SC_RECORD  /  ~/home/lv2record/ "@de ,
-        "Les fichiers sont enregistrés dans SC_RECORD   /    ~/home/lv2record/ "@fr;
+        rdfs:comment "recorded files go to /mount/usb0/lv2record/ or ~/home/lv2record/" , 
+        "Aufnahmen gehen nach /mount/usb0/lv2record/  /  ~/home/lv2record/ "@de ,
+        "Les fichiers sont enregistrés dans /mount/usb0/lv2record/   /    ~/home/lv2record/ "@fr;
     ] , [
         a lv2:OutputPort ,
             lv2:ControlPort ;
