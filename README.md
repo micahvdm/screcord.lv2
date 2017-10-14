@@ -16,4 +16,4 @@
 
 <p>install:</p>
 -    as user make install will install to ~./lv2/
--    as root make install will install to /usr/lib/lv2/
+-    as root make install will install to /zynthian/zynthian-plugins/lv2/
