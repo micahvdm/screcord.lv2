@@ -111,7 +111,7 @@ inline std::string SCapture::get_ffilename() {
     struct stat buffer;
     struct stat sb;
 	std::string pPath;
-	FILE *f = popen("mountpoint -- /media/usb0 | sed -n \'s/.*\\(not\\).*/\\1/p\'", "r");
+	FILE *f = popen("mountpoint -- /home/patch/data/Recordings | sed -n \'s/.*\\(not\\).*/\\1/p\'", "r");
     if (NULL != f)
     {
         /* test if something has been outputed by 
@@ -119,7 +119,7 @@ inline std::string SCapture::get_ffilename() {
         if (EOF == fgetc(f))
         {
             //puts("/dev/sda1 is NOT mounted");
-		pPath = "/media/usb0";
+		pPath = "/home/patch/data/Recordings";
         }
         else
         {
